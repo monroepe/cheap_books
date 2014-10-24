@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'devise'
 gem 'foundation-rails', '5.4.3.1'
+gem 'simple_form'
 
 group :development, :test do
   gem 'pry-rails'
