@@ -10,7 +10,7 @@
 <p><%= link_to "Comment", new_article_comment_path(@article) %></p>
 
   <% @article.comments.each do |comment| %>
-    <li><%= comment.body %>
+    <li><%= comment.body %> - <%= comment.user.username %>
     <% if comment.user == current_user %>
       <%= link_to "Edit", edit_article_comment_path(@article, comment) %> | <%= link_to "Delete", article_comment_path(@article, comment), method: :delete, data: { confirm: "Are your sure?" } %>
     <% end %>
