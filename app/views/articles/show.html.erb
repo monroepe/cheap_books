@@ -5,3 +5,10 @@
 <% end %>
 
 <h4><%= @article.description %></h4>
+
+<h3>Comments</h3>
+<p><%= link_to "Comment", new_article_comment_path(@article) %></p>
+
+  <% @article.comments.each do |comment| %>
+    <li><%= comment.body %></li>
+  <% end %>
