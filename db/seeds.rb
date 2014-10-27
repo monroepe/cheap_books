@@ -12,4 +12,5 @@ genres = Genre.create([{ name: "Classic" },
                        { name: "History" },
                        { name: "Politics" },
                        { name: "Self Help" },
-                       { name: "Education/Reference" }])
+                       { name: "Education/Reference" },
+                       { name: "Other" }])

@@ -1,0 +1,5 @@
+<h1>Cheap Books Forum</h1>
+
+<% @topics.each do |topic| %>
+  <li><%= link_to topic.title, topic_path(topic) %> <%= topic.genre.name %> - <%= topic.user.username %></li>
+<% end %>
