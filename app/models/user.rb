@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :articles
   has_many :comments
+  has_many :topics
 
   validates :username, presence: true
 
