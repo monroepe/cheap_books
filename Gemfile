@@ -12,6 +12,7 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'foundation-rails', '5.4.3.1'
 gem 'simple_form'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'pry-rails'
