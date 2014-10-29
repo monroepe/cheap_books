@@ -1,5 +1,7 @@
 <h1>Cheap/Free Books</h1>
 
+<p><%= link_to "New Article", new_article_path %></p>
+
 <% @articles.each do |article| %>
   <li><%= link_to article.title, article.url %> | <%= link_to "Discussion", article_path(article) %></li>
 <% end %>
