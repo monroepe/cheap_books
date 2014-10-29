@@ -3,3 +3,10 @@
 <% if @topic.user == current_user %>
   <p><%= link_to "Edit", edit_topic_path(@topic) %> | <%= link_to "Delete", topic_path(@topic), method: :delete, data: { confirm: "Are your sure?" } %></p>
 <% end %>
+
+<% @posts.each do |post| %>
+  <li><%= post.body %> - <%= post.user.username %>
+  <% if post.user == current_user %>
+    - <%= link_to "Edit", edit_topic_post_path(@topic, post) %> | <%= link_to "Delete", topic_post_path(@topic, post), method: :delete, data: { confirm: "Are your sure?" } %></li>
+  <% end %>
+<% end %>
