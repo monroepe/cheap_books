@@ -4,6 +4,10 @@
 
 <ol>
   <% @articles.each do |article| %>
-    <li><i class="fa fa-arrow-up"></i> <%= link_to article.title, article.url %> | <%= link_to "Discussion", article_path(article) %></li>
+    <li>
+    <%= button_to "Like" , article_votes_path(article),
+               method: :post,
+               params: { value: 1 } %>
+    <%= link_to article.title, article.url %> | <%= link_to "Discussion", article_path(article) %></li>
   <% end %>
 </ol>
