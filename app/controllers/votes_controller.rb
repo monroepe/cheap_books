@@ -1,5 +1,6 @@
 class VotesController < ApplicationController
   def create
+    binding.pry
     @article = Article.find(params[:article_id])
     @vote = @article.votes.new(vote_params)
     @vote.user = current_user
