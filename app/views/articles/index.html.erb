@@ -1,5 +1,13 @@
 <h1>Cheap/Free Books</h1>
 
-<% @articles.each do |article| %>
-  <li><%= link_to article.title, article.url %> | <%= link_to "Discussion", article_path(article) %></li>
-<% end %>
+<p><%= link_to "New Article", new_article_path %></p>
+
+<ol>
+  <% @articles.each do |article| %>
+    <li>
+    <%= button_to "Like" , article_votes_path(article),
+               method: :post,
+               params: { value: 1 } %>
+    <%= link_to article.title, article.url %> | <%= link_to "Discussion", article_path(article) %></li>
+  <% end %>
+</ol>
